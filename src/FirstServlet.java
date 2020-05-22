@@ -16,7 +16,7 @@ public class FirstServlet extends HttpServlet{
 	    String p=request.getParameter("userpass");  
 	    System.out.println("username:::::::"+n);
 	    System.out.println("password:::::::"+p);
-	    if(LoginDao.validate(n, p) || (n=="S38959" && p=="abc@123")){  
+	    if(LoginDao.validate(n, p)){  
 	        RequestDispatcher rd=request.getRequestDispatcher("servlet2");  
 	        rd.forward(request,response);  
 	    }  

@@ -4,12 +4,15 @@ public class LoginDao {
 		boolean status=false;  
 		try{  
 		Class.forName("com.mysql.cj.jdbc.Driver"); 
+		
+		  Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/demoapp?"
+		  + "user=root&password=root@123");
+		 
 		/*
-		 * Connection con = DriverManager.getConnection("jdbc:mysql://mysqldb/demoapp?"
-		 * + "user=root&password=root@123");
+		 * Connection con =
+		 * DriverManager.getConnection("jdbc:mysql://localhost/demoapp?" +
+		 * "user=root&password=root@123");
 		 */
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost/demoapp?" +
-                "user=root&password=root@123");
 		/*
 		 * Connection con=DriverManager.getConnection(
 		 * "jdbc:mysql://mysqldb:33060/demoapp","dbusr","root@123");
