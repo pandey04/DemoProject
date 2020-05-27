@@ -16,16 +16,25 @@ public class FirstServlet extends HttpServlet{
 	    String p=request.getParameter("userpass");  
 	    System.out.println("username:::::::"+n);
 	    System.out.println("password:::::::"+p);
-	    if(LoginDao.validate(n, p)){  
-	        RequestDispatcher rd=request.getRequestDispatcher("servlet2");  
-	        rd.forward(request,response);  
-	    }  
-	    else{  
-	        out.print("Sorry username or password error");  
-	        RequestDispatcher rd=request.getRequestDispatcher("login.html");  
-	        rd.include(request,response);  
-	    }  
-	          
+	    ValidateCred v = new ValidateCred();
+	    boolean result = v.validate(n,p);
+	    if(result)
+	    {
+		    if(LoginDao.validate(n, p)){  
+		        RequestDispatcher rd=request.getRequestDispatcher("servlet2");  
+		        rd.forward(request,response);  
+		    }  
+		    else{  
+		        out.print("Sorry username or password error");  
+		        RequestDispatcher rd=request.getRequestDispatcher("login.html");  
+		        rd.include(request,response);  
+		    } 
+	    }
+	        
+	    else
+	    {
+	    	System.out.println(" Username and Password does not meet the criteria..");
+	    }
 	    out.close();  
 	    }  
 
