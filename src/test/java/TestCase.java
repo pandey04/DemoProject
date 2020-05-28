@@ -1,13 +1,11 @@
 package test.java;
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-
-import junit.framework.Assert;
+import org.junit.Assert;
 import main.java.ValidateCred;
 public class TestCase {
 	
 
-	@SuppressWarnings("deprecation")
+	
 	@Test
 	void testValidateBlankUsername() {
 		ValidateCred t = new ValidateCred();		boolean isvalid = t.validate("", "dfgth34567@34");
@@ -15,7 +13,7 @@ public class TestCase {
 		
 	}
 	
-	@SuppressWarnings("deprecation")
+	
 	@Test
 	void testValidateBlankPassword() {
 		ValidateCred t = new ValidateCred();
@@ -24,7 +22,7 @@ public class TestCase {
 		
 	}
 	
-	@SuppressWarnings("deprecation")
+	
 	@Test
 	void testValidateBlankUnPwd() {
 		ValidateCred t = new ValidateCred();
@@ -32,7 +30,7 @@ public class TestCase {
 		Assert.assertEquals(false, isvalid2);
 	}
 		
-		@SuppressWarnings("deprecation")
+		
 		@Test
 		void testValidateCorrect() {
 			ValidateCred t = new ValidateCred();
