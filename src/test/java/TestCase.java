@@ -8,7 +8,7 @@ public class TestCase {
 
 	
 	@Test
-	void testValidateBlankUsername() {
+	public void testValidateBlankUsername() {
 		ValidateCred t = new ValidateCred();		boolean isvalid = t.validate("", "dfgth34567@34");
 		Assert.assertEquals(false, isvalid);
 		
@@ -16,7 +16,7 @@ public class TestCase {
 	
 	
 	@Test
-	void testValidateBlankPassword() {
+	public void testValidateBlankPassword() {
 		ValidateCred t = new ValidateCred();
 		boolean isvalid1 = t.validate("Sdf5678", "");
 		Assert.assertEquals(false, isvalid1);
@@ -25,7 +25,7 @@ public class TestCase {
 	
 	
 	@Test
-	void testValidateBlankUnPwd() {
+	public void testValidateBlankUnPwd() {
 		ValidateCred t = new ValidateCred();
 		boolean isvalid2= t.validate("", "");
 		Assert.assertEquals(false, isvalid2);
@@ -33,7 +33,7 @@ public class TestCase {
 		
 		
 		@Test
-		void testValidateCorrect() {
+		public void testValidateCorrect() {
 			ValidateCred t = new ValidateCred();
 			boolean isvalid3= t.validate("S34567", "welcome@123");
 			Assert.assertEquals(true, isvalid3);
