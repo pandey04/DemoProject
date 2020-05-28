@@ -1,6 +1,7 @@
 package test.java;
-import org.junit.jupiter.api.Test;
+//import org.junit.jupiter.api.Test;
 import org.junit.Assert;
+import org.junit.Test;
 import main.java.ValidateCred;
 public class TestCase {
 	
