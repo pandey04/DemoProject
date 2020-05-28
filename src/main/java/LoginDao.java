@@ -1,3 +1,4 @@
+package main.java;
 import java.sql.*;  
 public class LoginDao {
 	public static boolean validate(String name,String pass){  

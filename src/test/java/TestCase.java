@@ -1,16 +1,16 @@
+package test.java;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import junit.framework.Assert;
-
+import main.java.ValidateCred;
 public class TestCase {
 	
 
 	@SuppressWarnings("deprecation")
 	@Test
 	void testValidateBlankUsername() {
-		ValidateCred t = new ValidateCred();
-		boolean isvalid = t.validate("", "dfgth34567@34");
+		ValidateCred t = new ValidateCred();		boolean isvalid = t.validate("", "dfgth34567@34");
 		Assert.assertEquals(false, isvalid);
 		
 	}
