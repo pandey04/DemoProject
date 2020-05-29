@@ -1,6 +1,6 @@
 FROM tomcat:jdk8
 
-MAINTAINER shivangi_pandey
+MAINTAINER shivangiPandey
 
 ENV MYSQL_DATABASE=demoapp \
     MYSQL_ROOT_PASSWORD=root@123
