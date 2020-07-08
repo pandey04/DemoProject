@@ -1,0 +1,14 @@
+version: "3"
+services:
+  mysqldb:
+    build: ./mysql_db_setup_dockerfile
+   
+
+
+  webapp:
+    build: ./tomcat_setup_dockerfile
+    ports:
+      - 8080:8080
+
+
+
